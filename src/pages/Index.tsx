@@ -2,17 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { 
-  Heart, 
-  Baby, 
-  Calendar, 
-  BookOpen, 
-  Users, 
-  Phone, 
-  Shield,
+import { motion } from "framer-motion";
+import {
+  Heart,
+  Baby,
+  Calendar,
+  BookOpen,
+  Users,
+  Phone,
+  MessageCircle,
   Activity,
   MapPin,
-  Star
+  Star,
 } from "lucide-react";
 import heroImage from "@/assets/hero-maternal-care.jpg";
 import motherBabyImage from "@/assets/mother-baby-care.jpg";
@@ -26,14 +27,25 @@ const Index = () => {
         <div className="container mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold font-playfair text-primary">marternoval</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold font-playfair text-primary">
+              marternoval
+            </span>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
             <Link to="/login">
-              <Button variant="ghost" size="sm" className="text-sm sm:text-base">Log In</Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm sm:text-base"
+              >
+                Log In
+              </Button>
             </Link>
             <Link to="/register">
-              <Button size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90 text-sm sm:text-base">
+              <Button
+                size="sm"
+                className="bg-gradient-primary text-primary-foreground hover:opacity-90 text-sm sm:text-base"
+              >
                 Get Started
               </Button>
             </Link>
@@ -50,22 +62,30 @@ const Index = () => {
                 🌟 Supporting Nigerian Mothers
               </Badge>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-primary mb-4 sm:mb-6 leading-tight">
-                Nurturing Every Step of Your 
+                Nurturing Every Step of Your
                 <span className="block">Motherhood Journey</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-                From pregnancy tracking to emergency support, we're here to ensure 
-                every mother and baby receives the care they deserve. Join thousands 
-                of mothers already using marternoval.
+                From AI-powered pregnancy tracking to intelligent emergency
+                support, we're here to ensure every mother and baby receives the
+                care they deserve. Join thousands of mothers already using
+                Marternoval.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                 <Link to="/register" className="w-full sm:w-auto">
-                  <Button size="lg" className="bg-gradient-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+                  >
                     Start Your Journey
                   </Button>
                 </Link>
                 <Link to="/emergency" className="w-full sm:w-auto">
-                  <Button size="lg" variant="destructive" className="emergency-button w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    variant="destructive"
+                    className="emergency-button w-full sm:w-auto"
+                  >
                     🚨 Emergency Help
                   </Button>
                 </Link>
@@ -73,23 +93,64 @@ const Index = () => {
               <div className="flex items-center justify-center md:justify-start gap-4 sm:gap-6 mt-6 sm:mt-8">
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-500" />
-                  <span className="text-xs sm:text-sm font-medium">4.9/5 Rating</span>
+                  <span className="text-xs sm:text-sm font-medium">
+                    4.9/5 Rating
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                  <span className="text-xs sm:text-sm font-medium">10,000+ Mothers</span>
+                  <span className="text-xs sm:text-sm font-medium">
+                    10,000+ Mothers
+                  </span>
                 </div>
               </div>
             </div>
-            <div className="scale-in mt-8 md:mt-0">
+            <div className="scale-in mt-8 md:mt-0 ">
               <div className="relative">
-                <img 
-                  src={heroImage} 
-                  alt="Happy pregnant woman" 
+                <img
+                  src={heroImage}
+                  alt="Happy pregnant woman"
                   className="rounded-2xl sm:rounded-3xl shadow-card w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-hero opacity-10 rounded-2xl sm:rounded-3xl"></div>
               </div>
+               <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                className="absolute -top-4 -left-4 bg-card border border-border rounded-lg p-4 shadow-lg"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Baby className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm">Week 24</div>
+                    <div className="text-xs text-muted-foreground">
+                      Baby is growing!
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+                className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-4 shadow-lg"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-secondary/50 rounded-full flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm">AI Assistant</div>
+                    <div className="text-xs text-muted-foreground">
+                      Always here to help
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -103,8 +164,8 @@ const Index = () => {
               Comprehensive Maternal Care
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Everything you need for a healthy pregnancy and safe delivery, 
-              all in one beautiful platform.
+              Everything you need for a healthy pregnancy and safe delivery, all
+              in one beautiful platform.
             </p>
           </div>
 
@@ -114,12 +175,17 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-soft rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Baby className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">Pregnancy Tracker</h3>
+              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">
+                Pregnancy Tracker
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-                Track your baby's development week by week with personalized insights and milestones.
+                Track your baby's development week by week with personalized
+                insights and milestones.
               </p>
               <Link to="/pregnancy-tracker">
-                <Button variant="outline" className="w-full">Explore Tracker</Button>
+                <Button variant="outline" className="w-full">
+                  Explore Tracker
+                </Button>
               </Link>
             </Card>
 
@@ -128,12 +194,17 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-soft rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Calendar className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">Smart Reminders</h3>
+              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">
+                Smart Reminders
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-                Never miss a prenatal appointment with intelligent scheduling and SMS notifications.
+                Never miss a prenatal appointment with intelligent scheduling
+                and SMS notifications.
               </p>
               <Link to="/dashboard/patient">
-                <Button variant="outline" className="w-full">View Calendar</Button>
+                <Button variant="outline" className="w-full">
+                  View Calendar
+                </Button>
               </Link>
             </Card>
 
@@ -142,12 +213,17 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-soft rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">Expert Guidance</h3>
+              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">
+                Expert Guidance
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-                Access nutrition advice, exercise tips, and wellness guidance tailored to your stage.
+                Access nutrition advice, exercise tips, and wellness guidance
+                tailored to your stage.
               </p>
               <Link to="/health-guidance">
-                <Button variant="outline" className="w-full">Get Guidance</Button>
+                <Button variant="outline" className="w-full">
+                  Get Guidance
+                </Button>
               </Link>
             </Card>
 
@@ -156,12 +232,17 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-soft rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Users className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">Mother Community</h3>
+              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">
+                Mother Community
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-                Connect with other mothers, share experiences, and get support from our community.
+                Connect with other mothers, share experiences, and get support
+                from our community.
               </p>
               <Link to="/community">
-                <Button variant="outline" className="w-full">Join Community</Button>
+                <Button variant="outline" className="w-full">
+                  Join Community
+                </Button>
               </Link>
             </Card>
 
@@ -170,12 +251,17 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-soft rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Phone className="h-6 w-6 sm:h-8 sm:w-8 text-destructive" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">Emergency Support</h3>
+              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">
+                Emergency Support
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-                24/7 emergency helpline connecting you to medical professionals and ambulance services.
+                24/7 emergency helpline connecting you to medical professionals
+                and ambulance services.
               </p>
               <Link to="/emergency">
-                <Button variant="destructive" className="w-full">Emergency Help</Button>
+                <Button variant="destructive" className="w-full">
+                  Emergency Help
+                </Button>
               </Link>
             </Card>
 
@@ -184,12 +270,17 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-soft rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">Find Care Nearby</h3>
+              <h3 className="text-lg sm:text-xl font-semibold font-playfair mb-3 sm:mb-4">
+                Find Care Nearby
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-                Locate verified clinics, hospitals, and midwives in your area with ratings and reviews.
+                Locate verified clinics, hospitals, and midwives in your area
+                with ratings and reviews.
               </p>
               <Link to="/dashboard/patient">
-                <Button variant="outline" className="w-full">Find Clinics</Button>
+                <Button variant="outline" className="w-full">
+                  Find Clinics
+                </Button>
               </Link>
             </Card>
           </div>
@@ -201,20 +292,36 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center text-white">
             <div className="fade-in">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">10,000+</div>
-              <div className="text-sm sm:text-base md:text-lg text-white/90">Happy Mothers</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">
+                10,000+
+              </div>
+              <div className="text-sm sm:text-base md:text-lg text-white/90">
+                Happy Mothers
+              </div>
             </div>
             <div className="fade-in">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">5,000+</div>
-              <div className="text-sm sm:text-base md:text-lg text-white/90">Healthy Babies</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">
+                5,000+
+              </div>
+              <div className="text-sm sm:text-base md:text-lg text-white/90">
+                Healthy Babies
+              </div>
             </div>
             <div className="fade-in">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">98%</div>
-              <div className="text-sm sm:text-base md:text-lg text-white/90">Satisfaction Rate</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">
+                98%
+              </div>
+              <div className="text-sm sm:text-base md:text-lg text-white/90">
+                Satisfaction Rate
+              </div>
             </div>
             <div className="fade-in">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">24/7</div>
-              <div className="text-sm sm:text-base md:text-lg text-white/90">Emergency Support</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-1 sm:mb-2">
+                24/7
+              </div>
+              <div className="text-sm sm:text-base md:text-lg text-white/90">
+                Emergency Support
+              </div>
             </div>
           </div>
         </div>
@@ -228,17 +335,25 @@ const Index = () => {
               Ready to Start Your Journey?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Join thousands of mothers who trust marternoval for their pregnancy journey. 
-              Get started today and experience the difference.
+              Join thousands of mothers who trust marternoval for their
+              pregnancy journey. Get started today and experience the
+              difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link to="/register" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-gradient-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="bg-gradient-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+                >
                   Get Started Free
                 </Button>
               </Link>
               <Link to="/dashboard/doctor" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto"
+                >
                   Join as Healthcare Provider
                 </Button>
               </Link>
@@ -254,39 +369,105 @@ const Index = () => {
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start space-x-2 mb-3 sm:mb-4">
                 <Heart className="h-5 w-5 sm:h-6 sm:w-6" />
-                <span className="text-lg sm:text-xl font-bold font-playfair">marternoval</span>
+                <span className="text-lg sm:text-xl font-bold font-playfair">
+                  marternoval
+                </span>
               </div>
               <p className="text-sm sm:text-base text-primary-foreground/80">
-                Supporting every mother and baby with compassionate, 
+                Supporting every mother and baby with compassionate,
                 comprehensive healthcare solutions.
               </p>
             </div>
             <div className="text-center sm:text-left">
-              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">For Patients</h4>
+              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                For Patients
+              </h4>
               <ul className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-sm sm:text-base">
-                <li><Link to="/pregnancy-tracker" className="hover:text-primary-foreground">Pregnancy Tracker</Link></li>
-                <li><Link to="/health-guidance" className="hover:text-primary-foreground">Health Guidance</Link></li>
-                <li><Link to="/community" className="hover:text-primary-foreground">Community</Link></li>
-                <li><Link to="/emergency" className="hover:text-primary-foreground">Emergency Help</Link></li>
+                <li>
+                  <Link
+                    to="/pregnancy-tracker"
+                    className="hover:text-primary-foreground"
+                  >
+                    Pregnancy Tracker
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/health-guidance"
+                    className="hover:text-primary-foreground"
+                  >
+                    Health Guidance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/community"
+                    className="hover:text-primary-foreground"
+                  >
+                    Community
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/emergency"
+                    className="hover:text-primary-foreground"
+                  >
+                    Emergency Help
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="text-center sm:text-left">
-              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">For Professionals</h4>
+              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                For Professionals
+              </h4>
               <ul className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-sm sm:text-base">
-                <li><Link to="/dashboard/doctor" className="hover:text-primary-foreground">Doctor Portal</Link></li>
-                <li><Link to="/dashboard/admin" className="hover:text-primary-foreground">Admin Dashboard</Link></li>
+                <li>
+                  <Link
+                    to="/dashboard/doctor"
+                    className="hover:text-primary-foreground"
+                  >
+                    Doctor Portal
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dashboard/admin"
+                    className="hover:text-primary-foreground"
+                  >
+                    Admin Dashboard
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="text-center sm:text-left">
-              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Support</h4>
+              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                Support
+              </h4>
               <ul className="space-y-1 sm:space-y-2 text-primary-foreground/80 text-sm sm:text-base">
-                <li><a href="tel:+234-800-MATER" className="hover:text-primary-foreground">Emergency: +234-800-MATER</a></li>
-                <li><a href="mailto:support@marternoval.ng" className="hover:text-primary-foreground">support@marternoval.ng</a></li>
+                <li>
+                  <a
+                    href="tel:+234-800-MATER"
+                    className="hover:text-primary-foreground"
+                  >
+                    Emergency: +234-800-MATER
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:support@marternoval.ng"
+                    className="hover:text-primary-foreground"
+                  >
+                    support@marternoval.ng
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-primary-foreground/60">
-            <p className="text-xs sm:text-sm">&copy; 2024 marternoval. Made with ❤️ for Nigerian families.</p>
+            <p className="text-xs sm:text-sm">
+              &copy; 2024 marternoval. Made with ❤️ for Nigerian families.
+            </p>
           </div>
         </div>
       </footer>
