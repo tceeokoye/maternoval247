@@ -28,7 +28,7 @@ const Index = () => {
           <div className="flex items-center space-x-2">
             <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
             <span className="text-lg sm:text-xl md:text-2xl font-bold font-playfair text-primary">
-              marternoval
+              maternova
             </span>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
@@ -69,7 +69,7 @@ const Index = () => {
                 From AI-powered pregnancy tracking to intelligent emergency
                 support, we're here to ensure every mother and baby receives the
                 care they deserve. Join thousands of mothers already using
-                Marternoval.
+                Maternova.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                 <Link to="/register" className="w-full sm:w-auto">
@@ -335,7 +335,7 @@ const Index = () => {
               Ready to Start Your Journey?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Join thousands of mothers who trust marternoval for their
+              Join thousands of mothers who trust maternova for their
               pregnancy journey. Get started today and experience the
               difference.
             </p>
@@ -370,7 +370,7 @@ const Index = () => {
               <div className="flex items-center justify-center sm:justify-start space-x-2 mb-3 sm:mb-4">
                 <Heart className="h-5 w-5 sm:h-6 sm:w-6" />
                 <span className="text-lg sm:text-xl font-bold font-playfair">
-                  marternoval
+                  maternova
                 </span>
               </div>
               <p className="text-sm sm:text-base text-primary-foreground/80">
@@ -455,10 +455,10 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:support@marternoval.ng"
+                    href="mailto:support@maternova.ng"
                     className="hover:text-primary-foreground"
                   >
-                    support@marternoval.ng
+                    support@maternova.ng
                   </a>
                 </li>
               </ul>
@@ -466,7 +466,7 @@ const Index = () => {
           </div>
           <div className="border-t border-primary-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-primary-foreground/60">
             <p className="text-xs sm:text-sm">
-              &copy; 2024 marternoval. Made with ❤️ for Nigerian families.
+              &copy; 2024 maternova. Made with ❤️ for Nigerian families.
             </p>
           </div>
         </div>

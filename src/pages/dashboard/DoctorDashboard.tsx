@@ -37,7 +37,7 @@ const DoctorDashboard = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Heart className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold font-playfair text-primary">marternoval</span>
+            <span className="text-xl font-bold font-playfair text-primary">maternova</span>
           </Link>
           
           <div className="flex items-center space-x-4">

@@ -45,7 +45,7 @@ const EmergencyHelp = () => {
 
   const emergencyNumbers = [
     { name: "Ambulance", number: "+234-199", icon: Ambulance, color: "destructive" },
-    { name: "marternoval Hotline", number: "+234-800-MATER", icon: Heart, color: "primary" },
+    { name: "maternova Hotline", number: "+234-800-MATER", icon: Heart, color: "primary" },
     { name: "Police", number: "+234-199", icon: Shield, color: "destructive" },
     { name: "Hospital Direct", number: "+234-1-4407979", icon: Phone, color: "primary" },
   ];
@@ -88,7 +88,7 @@ const EmergencyHelp = () => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Heart className="h-6 w-6" />
-            <span className="text-xl font-bold font-playfair">marternoval Emergency</span>
+            <span className="text-xl font-bold font-playfair">maternova Emergency</span>
           </Link>
           <div className="flex items-center space-x-2">
             <AlertTriangle className="h-5 w-5" />

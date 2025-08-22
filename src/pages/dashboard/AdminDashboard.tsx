@@ -40,7 +40,7 @@ const AdminDashboard = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Heart className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold font-playfair text-primary">marternoval Admin</span>
+            <span className="text-xl font-bold font-playfair text-primary">maternova Admin</span>
           </Link>
           
           <div className="flex items-center space-x-4">
@@ -59,7 +59,7 @@ const AdminDashboard = () => {
           <h1 className="text-3xl font-bold font-playfair text-primary mb-2">
             System Administration 🛠️
           </h1>
-          <p className="text-muted-foreground">Monitor and manage the marternoval platform</p>
+          <p className="text-muted-foreground">Monitor and manage the maternova platform</p>
         </div>
 
         {/* System Stats */}

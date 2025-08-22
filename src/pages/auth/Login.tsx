@@ -22,7 +22,7 @@ const Login = () => {
     if (formData.email && formData.password) {
       toast({
         title: "Welcome back!",
-        description: "Successfully logged in to marternoval.",
+        description: "Successfully logged in to maternova.",
       });
       // Route based on user type - in real app, this would be determined by the API response
       if (formData.email.includes("doctor")) {
@@ -42,7 +42,7 @@ const Login = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center space-x-2">
             <Heart className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold font-playfair text-primary">marternoval</span>
+            <span className="text-2xl font-bold font-playfair text-primary">maternova</span>
           </Link>
           <p className="text-muted-foreground mt-2">Welcome back to your journey</p>
         </div>

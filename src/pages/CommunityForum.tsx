@@ -104,7 +104,7 @@ const CommunityForum = () => {
             </Link>
             <Link to="/" className="flex items-center space-x-2">
               <Heart className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold font-playfair text-primary">marternoval</span>
+              <span className="text-xl font-bold font-playfair text-primary">maternova</span>
             </Link>
           </div>
         </div>
