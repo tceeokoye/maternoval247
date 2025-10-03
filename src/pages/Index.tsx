@@ -32,6 +32,33 @@ const Index = () => {
             </span>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
+            <Link to="/dashboard/patient">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm sm:text-base"
+              >
+               Patient
+              </Button>
+            </Link>
+            <Link to="dashboard/doctor">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm sm:text-base"
+              >
+                Doctor
+              </Button>
+            </Link>
+            <Link to="/dashboard/admin">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm sm:text-base"
+              >
+               Admin
+              </Button>
+            </Link>
             <Link to="/login">
               <Button
                 variant="ghost"
