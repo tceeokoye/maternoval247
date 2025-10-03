@@ -39,7 +39,28 @@ const DoctorDashboard = () => {
             <Heart className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold font-playfair text-primary">maternova</span>
           </Link>
-          
+           <div className="flex items-center space-x-2 sm:space-x-4">
+            <Link to="/dashboard/patient">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm sm:text-base"
+              >
+               Patient
+              </Button>
+            </Link>
+            <Link to="/dashboard/admin">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm sm:text-base"
+              >
+                Admin
+              </Button>
+            </Link>
+           
+        
+          </div>
           <div className="flex items-center space-x-4">
             <Bell className="h-5 w-5 text-muted-foreground" />
             <Settings className="h-5 w-5 text-muted-foreground" />
